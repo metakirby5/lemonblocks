@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/metakirby5/lemonblocks#readme",
   "dependencies": {
+    "acpi": "0.0.1",
     "i3": "^0.1.2",
     "lodash": "^3.10.1",
     "moment": "^2.10.6"
