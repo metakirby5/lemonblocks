@@ -2,7 +2,7 @@
 
 const blocks = require('./lib/blocks');
 
-let b = new blocks.VolumeBlock();
+let b = new blocks.SsidBlock();
 
 console.log(b.query());
 
