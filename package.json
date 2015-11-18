@@ -1,0 +1,25 @@
+{
+  "name": "lemonblocks",
+  "version": "1.0.0",
+  "description": "Node.js based lemonbar builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metakirby5/lemonblocks.git"
+  },
+  "keywords": [
+    "lemonbar"
+  ],
+  "author": "Ethan Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metakirby5/lemonblocks/issues"
+  },
+  "homepage": "https://github.com/metakirby5/lemonblocks#readme",
+  "dependencies": {
+    "i3": "^0.1.2"
+  }
+}
