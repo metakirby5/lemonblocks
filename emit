@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 
 const blocks = require('./lib/blocks');
@@ -10,3 +11,4 @@ b.on('update', () => {
   console.log(b.query());
 });
 
+// vim: set syntax=javascript:

@@ -2,7 +2,7 @@
   "name": "lemonblocks",
   "version": "1.0.0",
   "description": "Node.js based lemonbar builder",
-  "main": "index.js",
+  "main": "emit",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
