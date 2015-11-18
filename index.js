@@ -2,7 +2,7 @@
 
 const blocks = require('./lib/blocks');
 
-let b = new blocks.BatteryBlock();
+let b = new blocks.VolumeBlock();
 
 console.log(b.query());
 
