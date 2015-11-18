@@ -21,6 +21,7 @@
   "homepage": "https://github.com/metakirby5/lemonblocks#readme",
   "dependencies": {
     "i3": "^0.1.2",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6"
   }
 }
