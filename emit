@@ -11,4 +11,4 @@ b.on('update', () => {
   console.log(b.query());
 });
 
-// vim: set syntax=javascript:
+// vim: ft=javascript
