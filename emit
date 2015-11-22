@@ -38,3 +38,4 @@ class Bar {
 let bar = new Bar();
 
 // vim: ft=javascript
+
