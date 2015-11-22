@@ -3,12 +3,39 @@
 
 const blocks = require('./lib/blocks');
 
-let b = new blocks.SsidBlock();
+class Bar {
+  constructor() {
+    this.blocks = [
+      new blocks.StaticBlock('%{l}  '),
+      new blocks.WorkspaceBlock('  '),
+      new blocks.StaticBlock('%{c}'),
+      // new blocks.MpdBlock(),
+      new blocks.StaticBlock('%{r}'),
+      new blocks.StaticBlock('B '),
+      new blocks.BatteryBlock(),
+      new blocks.StaticBlock('・  V '),
+      new blocks.VolumeBlock(),
+      new blocks.StaticBlock('・  N '),
+      new blocks.SsidBlock(),
+      new blocks.StaticBlock('・  T '),
+      new blocks.DatetimeBlock(),
+      new blocks.StaticBlock('  '),
+    ];
 
-console.log(b.query());
+    this.blocks.forEach((block) => {
+      block.on('update', () => { this.output(); });
+    });
 
-b.on('update', () => {
-  console.log(b.query());
-});
+    this.output();
+  }
+
+  output() {
+    console.log(this.blocks.map((block) => {
+      return block.query();
+    }).join(''));
+  }
+}
+
+let bar = new Bar();
 
 // vim: ft=javascript
