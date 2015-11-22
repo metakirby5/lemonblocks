@@ -9,7 +9,7 @@ class Bar {
       new blocks.StaticBlock('%{l}  '),
       new blocks.WorkspaceBlock('  '),
       new blocks.StaticBlock('%{c}'),
-      // new blocks.MpdBlock(),
+      new blocks.CurrentSongBlock(),
       new blocks.StaticBlock('%{r}'),
       new blocks.BatteryBlock(),
       new blocks.StaticBlock('  ・  '),
