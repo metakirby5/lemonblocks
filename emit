@@ -41,10 +41,16 @@ class Bar {
 }
 
 // Do configuration from command line options
-// TODO; also consider having the fg/bg as CLI options
-config.update({
-  cUrgent: '#ffdc6f6c',
+let argv = require('minimist')(process.argv.slice(2), {
+  alias: {
+    F: 'cFG',
+    U: 'cUL',
+    B: 'cBG',
+    urgent: 'cUrgent',
+  }
 });
+delete argv._;
+config.update(argv);
 
 let bar = new Bar();
 
