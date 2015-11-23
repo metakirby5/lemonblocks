@@ -8,6 +8,9 @@ const blocks = require('./lib/blocks');
 class Bar {
   constructor() {
     this.blocks = [
+      new blocks.StaticBlock(`%{F${config.get('cFG')}}`),
+      new blocks.StaticBlock(`%{U${config.get('cFG')}}`),
+      new blocks.StaticBlock(`%{B${config.get('cBG')}}`),
       new blocks.StaticBlock('%{l} '),
       new blocks.WorkspaceBlock(),
       new blocks.StaticBlock('%{c}'),
