@@ -38,7 +38,10 @@ class Bar {
 }
 
 // Do configuration from command line options
-// TODO
+// TODO; also consider having the fg/bg as CLI options
+config.update({
+  cUrgent: '#ffdc6f6c',
+});
 
 let bar = new Bar();
 
