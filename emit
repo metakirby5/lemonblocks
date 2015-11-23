@@ -22,7 +22,7 @@ class Bar {
     ];
 
     this.blocks.forEach((block) => {
-      block.on('update', () => { this.output(); });
+      block.on('update', this.output.bind(this));
     });
 
     this.output();
