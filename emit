@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 
+const config = require('./lib/config');
 const blocks = require('./lib/blocks');
+
 
 class Bar {
   constructor() {
@@ -34,6 +36,9 @@ class Bar {
     }).join(''));
   }
 }
+
+// Do configuration from command line options
+// TODO
 
 let bar = new Bar();
 
