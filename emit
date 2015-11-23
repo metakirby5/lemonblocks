@@ -6,19 +6,19 @@ const blocks = require('./lib/blocks');
 class Bar {
   constructor() {
     this.blocks = [
-      new blocks.StaticBlock('%{l}  '),
-      new blocks.WorkspaceBlock('  '),
+      new blocks.StaticBlock('%{l} '),
+      new blocks.WorkspaceBlock(),
       new blocks.StaticBlock('%{c}'),
       new blocks.CurrentSongBlock(),
       new blocks.StaticBlock('%{r}'),
       new blocks.BatteryBlock(),
-      new blocks.StaticBlock('  ・  '),
+      new blocks.StaticBlock(' ・ '),
       new blocks.VolumeBlock(),
-      new blocks.StaticBlock('  ・  '),
+      new blocks.StaticBlock(' ・ '),
       new blocks.SsidBlock(),
-      new blocks.StaticBlock('  ・  '),
+      new blocks.StaticBlock(' ・ '),
       new blocks.DatetimeBlock(),
-      new blocks.StaticBlock('  '),
+      new blocks.StaticBlock(' '),
     ];
 
     this.blocks.forEach((block) => {
