@@ -16,6 +16,8 @@ class Bar {
       new blocks.StaticBlock('%{c}'),
       new blocks.CurrentSongBlock(),
       new blocks.StaticBlock('%{r}'),
+      new blocks.YumUpdateBlock(),
+      new blocks.StaticBlock(' ・ '),
       new blocks.BatteryBlock(),
       new blocks.StaticBlock(' ・ '),
       new blocks.VolumeBlock(),
