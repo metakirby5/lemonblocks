@@ -9,7 +9,7 @@ class Bar {
   constructor() {
     this.blocks = [
       new blocks.StaticBlock(`%{F${config.get('cFG')}}`),
-      new blocks.StaticBlock(`%{U${config.get('cFG')}}`),
+      new blocks.StaticBlock(`%{U${config.get('cUL')}}`),
       new blocks.StaticBlock(`%{B${config.get('cBG')}}`),
       new blocks.StaticBlock('%{+u}%{l} '),
       new blocks.WorkspaceBlock(),
