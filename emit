@@ -20,6 +20,7 @@ class Bar {
       new blocks.StaticBlock(' ・ '),
       new blocks.BatteryBlock(),
       new blocks.StaticBlock(' ・ '),
+      new blocks.PlayStatusBlock(),
       new blocks.VolumeBlock(),
       new blocks.StaticBlock(' ・ '),
       new blocks.SsidBlock(),
