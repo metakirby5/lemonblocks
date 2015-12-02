@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 
-const config = require('./lib/config');
-const blocks = require('./lib/blocks');
+const process = require('process');
+const config  = require('./lib/config');
+const blocks  = require('./lib/blocks');
 
 
 class Bar {
@@ -36,6 +37,12 @@ class Bar {
     this.output();
   }
 
+  update() {
+    this.blocks.forEach((block) => {
+      block.update();
+    });
+  }
+
   output() {
     console.log(this.blocks.map((block) => {
       return block.query();
@@ -57,6 +64,9 @@ delete argv._;
 config.update(argv);
 
 let bar = new Bar();
+
+// Update all blocks on SIGPOLL
+process.on('SIGUSR1', bar.update.bind(bar));
 
 // vim: ft=javascript
 
