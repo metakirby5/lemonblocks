@@ -22,6 +22,7 @@ class Bar {
       new blocks.BatteryBlock(),
       new blocks.StaticBlock('・'),
       new blocks.PlayStatusBlock(),
+      new blocks.StaticBlock('・'),
       new blocks.VolumeBlock(),
       new blocks.StaticBlock('・'),
       new blocks.SsidBlock(),
