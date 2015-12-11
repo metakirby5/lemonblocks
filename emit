@@ -31,23 +31,23 @@ class Bar {
       new blocks.DatetimeBlock(),
     ];
 
+    // Re-render on every update
     this.blocks.forEach((block) => {
-      block.on('update', this.output.bind(this));
+      block.on('update', this.render.bind(this));
     });
 
-    this.output();
+    this.render();
   }
 
-  update(i) {
-    if (i !== undefined)
-      this.blocks[i].update();
-    else
-      this.blocks.forEach((block) => {
-        block.update();
-      });
+  // Update all blocks
+  update() {
+    this.blocks.forEach((block) => {
+      block.update();
+    });
   }
 
-  output() {
+  // Print the output of all blocks concatenated
+  render() {
     console.log(this.blocks.map((block) => {
       return block.query();
     }).join(''));
