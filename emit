@@ -4,6 +4,7 @@
 const process = require('process');
 const config  = require('./lib/config');
 const blocks  = require('./lib/blocks');
+const clients = require('./lib/clients');
 
 
 class Bar {
@@ -37,10 +38,13 @@ class Bar {
     this.output();
   }
 
-  update() {
-    this.blocks.forEach((block) => {
-      block.update();
-    });
+  update(i) {
+    if (i !== undefined)
+      this.blocks[i].update();
+    else
+      this.blocks.forEach((block) => {
+        block.update();
+      });
   }
 
   output() {
@@ -65,8 +69,11 @@ config.update(argv);
 
 let bar = new Bar();
 
-// Update all blocks on SIGPOLL
-process.on('SIGUSR1', bar.update.bind(bar));
+// Update all blocks on lid open
+clients.acpi.on('button/lid', function(_, state) {
+  if (state === 'open')
+    bar.update();
+});
 
 // vim: ft=javascript
 
