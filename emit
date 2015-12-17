@@ -69,7 +69,7 @@ let bar = new Bar();
 // Update all blocks on lid open
 clients.acpi.on('button/lid', function(_, state) {
   if (state === 'open')
-    setTimeout(bar.update, config.get('lidOpenTimeout'));
+    setTimeout(bar.update.bind(bar), config.get('lidOpenTimeout'));
 });
 
 // vim: ft=javascript
