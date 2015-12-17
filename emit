@@ -14,6 +14,7 @@ class Bar {
       new blocks.StaticBlock(`%{U${config.get('cUL')}}`),
       new blocks.StaticBlock(`%{B${config.get('cBG')}}`),
       new blocks.StaticBlock('%{l}'),
+      new blocks.I3ModeBlock(),
       new blocks.WorkspaceBlock(),
       new blocks.StaticBlock('%{c}'),
       new blocks.CurrentSongBlock(),
