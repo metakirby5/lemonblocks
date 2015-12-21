@@ -12,7 +12,6 @@ class Bar {
     this.blocks = [
       new blocks.StaticBlock(`%{U${config.get('cUnderline')}}`),
       new blocks.StaticBlock('%{l}'),
-      new blocks.StaticBlock('  '),
       new blocks.I3ModeBlock(),
       new blocks.WorkspaceBlock(),
       new blocks.StaticBlock('%{c}'),
@@ -27,7 +26,6 @@ class Bar {
       new blocks.SsidBlock(),
       new blocks.StaticBlock(' '),
       new blocks.DatetimeBlock(),
-      new blocks.StaticBlock('  '),
     ];
 
     // Re-render on every update
