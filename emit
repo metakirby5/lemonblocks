@@ -10,9 +10,7 @@ const clients = require('./lib/clients');
 class Bar {
   constructor() {
     this.blocks = [
-      new blocks.StaticBlock(`%{F${config.get('cFG')}}`),
-      new blocks.StaticBlock(`%{U${config.get('cUL')}}`),
-      new blocks.StaticBlock(`%{B${config.get('cBG')}}`),
+      new blocks.StaticBlock(`%{U${config.get('cUnderline')}}`),
       new blocks.StaticBlock('%{l}'),
       new blocks.I3ModeBlock(),
       new blocks.WorkspaceBlock(),
@@ -20,12 +18,13 @@ class Bar {
       new blocks.CurrentSongBlock(),
       new blocks.StaticBlock('%{r}'),
       new blocks.BatteryBlock(),
-      new blocks.StaticBlock('・'),
+      new blocks.StaticBlock(' '),
       new blocks.PlayStatusBlock(),
+      new blocks.StaticBlock(' '),
       new blocks.VolumeBlock(),
-      new blocks.StaticBlock('・'),
+      new blocks.StaticBlock(' '),
       new blocks.SsidBlock(),
-      new blocks.StaticBlock('・'),
+      new blocks.StaticBlock(' '),
       new blocks.DatetimeBlock(),
     ];
 
@@ -55,11 +54,10 @@ class Bar {
 // Do configuration from command line options
 let argv = require('minimist')(process.argv.slice(2), {
   alias: {
-    F: 'cFG',
-    U: 'cUL',
     B: 'cBG',
-    urgent: 'cUrgent',
-    accent: 'cAccent',
+    A: 'cAccent',
+    U: 'cUrgent',
+    L: 'cUnderline'
   }
 });
 delete argv._;
