@@ -24,11 +24,6 @@ class Bar {
       new blocks.StaticBlock(' '),
       new blocks.VolumeBlock(),
       new blocks.StaticBlock(' '),
-//       new blocks.ProcBlock({
-//         dropbox: 'd',
-//         xflux: 'f'
-//       }),
-      new blocks.StaticBlock(' '),
       new blocks.SsidBlock(),
       new blocks.StaticBlock(' '),
       new blocks.DatetimeBlock(),

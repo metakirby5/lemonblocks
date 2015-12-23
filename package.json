@@ -21,6 +21,7 @@
   "homepage": "https://github.com/metakirby5/lemonblocks#readme",
   "dependencies": {
     "acpi": "0.0.1",
+    "async": "^1.5.0",
     "i3": "^0.1.2",
     "linux-battery": "^3.0.1",
     "lodash": "^3.10.1",
