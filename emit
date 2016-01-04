@@ -22,7 +22,7 @@ class Bar {
         new blocks.PlayStatusBlock(),
         new blocks.StaticBlock(' '),
         new blocks.VolumeBlock()
-      ], 'SOUND', 'SOUND', true, true),
+      ], 'SOUND', 'SOUND', true, false),
       new blocks.StaticBlock(' '),
       new blocks.BatteryBlock(),
       new blocks.StaticBlock(' '),
