@@ -16,7 +16,7 @@ class Bar {
       new blocks.I3ModeBlock(),
       new blocks.WorkspaceBlock(),
       new blocks.StaticBlock('%{r}'),
-      new blocks.ExpandableBlock([
+      new blocks.AnimatedExpandableBlock([
         new blocks.CurrentSongBlock(),
         new blocks.StaticBlock(' '),
         new blocks.PlayStatusBlock(),
