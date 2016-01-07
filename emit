@@ -39,6 +39,9 @@ class Bar {
       block.on('update', this.render.bind(this));
     });
 
+    // Prevous render
+    this.prev = '';
+
     this.render();
   }
 
@@ -51,9 +54,14 @@ class Bar {
 
   // Print the output of all blocks concatenated
   render() {
-    console.log(this.blocks.map((block) => {
+    let cur = this.blocks.map((block) => {
       return block.query();
-    }).join(''));
+    }).join('');
+
+    if (cur !== this.prev) {
+      this.prev = cur;
+      console.log(cur);
+    }
   }
 }
 
