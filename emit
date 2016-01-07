@@ -16,13 +16,13 @@ class Bar {
       new blocks.I3ModeBlock(),
       new blocks.WorkspaceBlock(),
       new blocks.StaticBlock('%{r}'),
-      new blocks.AnimatedExpandableBlock([
+      new blocks.ExpandableBlock([
         new blocks.CurrentSongBlock(),
         new blocks.StaticBlock(' '),
         new blocks.PlayStatusBlock(),
         new blocks.StaticBlock(' '),
         new blocks.VolumeBlock()
-      ], 'SOUND', 'SOUND', false),
+      ], 'SOUND', 'SOUND', true, true),
       new blocks.StaticBlock(' '),
       new blocks.BatteryBlock(),
       new blocks.StaticBlock(' '),
