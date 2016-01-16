@@ -26,6 +26,7 @@ class Bar {
         new blocks.SsidBlock(),
         new blocks.StaticBlock(' '),
         new blocks.WeatherBlock('San Diego, CA', 'C'),
+        new blocks.StaticBlock(' '),
       ], '-', '+', false),
       new blocks.StaticBlock(' '),
       new blocks.BatteryBlock(),
