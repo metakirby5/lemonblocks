@@ -12,27 +12,18 @@ class Bar {
     this.blocks = [
       new blocks.StaticBlock(`%{U${config.get('cUnderline')}}`),
       new blocks.StaticBlock('%{l}'),
-      new blocks.StaticBlock(' '),
       new blocks.I3ModeBlock(),
       new blocks.WorkspaceBlock(),
+      new blocks.StaticBlock('%{c}'),
+      new blocks.DatetimeBlock(),
       new blocks.StaticBlock('%{r}'),
       new blocks.AnimatedExpandableBlock([
-        new blocks.CurrentSongBlock(),
-        new blocks.StaticBlock(' '),
-        new blocks.PlayStatusBlock(),
-        new blocks.StaticBlock(' '),
-        new blocks.VolumeBlock(),
-        new blocks.StaticBlock(' '),
-        new blocks.SsidBlock(),
-        new blocks.StaticBlock(' '),
         new blocks.WeatherBlock('San Diego, CA', 'C'),
-        new blocks.StaticBlock(' '),
+        new blocks.SsidBlock(),
+        new blocks.PlayStatusBlock(),
+        new blocks.VolumeBlock(),
       ], '-', '+', false),
-      new blocks.StaticBlock(' '),
       new blocks.BatteryBlock(),
-      new blocks.StaticBlock(' '),
-      new blocks.DatetimeBlock(),
-      new blocks.StaticBlock(' '),
     ];
 
     // Re-render on every update
