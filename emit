@@ -21,6 +21,7 @@ class Bar {
       new blocks.SsidBlock(),
       new blocks.PlayStatusBlock(),
       new blocks.VolumeBlock(),
+      new blocks.BatteryBlock(),
     ];
 
     // Re-render on every update
