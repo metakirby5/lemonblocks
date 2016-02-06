@@ -17,13 +17,10 @@ class Bar {
       new blocks.StaticBlock('%{c}'),
       new blocks.DatetimeBlock(),
       new blocks.StaticBlock('%{r}'),
-      new blocks.AnimatedExpandableBlock([
-        new blocks.WeatherBlock('San Diego, CA', 'C'),
-        new blocks.SsidBlock(),
-        new blocks.PlayStatusBlock(),
-        new blocks.VolumeBlock(),
-      ], '-', '+', false),
-      new blocks.BatteryBlock(),
+      new blocks.WeatherBlock('San Diego, CA', 'C'),
+      new blocks.SsidBlock(),
+      new blocks.PlayStatusBlock(),
+      new blocks.VolumeBlock(),
     ];
 
     // Re-render on every update
