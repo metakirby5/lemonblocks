@@ -18,9 +18,13 @@ class Bar {
       new blocks.DatetimeBlock(),
       new blocks.StaticBlock('%{r}'),
       new blocks.WeatherBlock('San Diego, CA', 'C'),
+      new blocks.StaticBlock(' / '),
       new blocks.SsidBlock(),
+      new blocks.StaticBlock(' / '),
       new blocks.PlayStatusBlock(),
+      new blocks.StaticBlock(' / '),
       new blocks.VolumeBlock(),
+      new blocks.StaticBlock(' / '),
       new blocks.BatteryBlock(),
     ];
 
